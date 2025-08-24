@@ -1,0 +1,12 @@
+name = "Kvadratura2Tocke"
+uuid = "e46ffe04-099d-479e-a89c-1f6e96e64fbc"
+authors = ["Your Name <ula.derenda@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[compat]
+Printf = "1.11.0"
+Test = "1.11.0"
