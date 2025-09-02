@@ -1,0 +1,198 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[a4paper,text={16.5cm,25.2cm},centering]{geometry}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex}
+
+\hypersetup
+       {   pdfauthor = {  },
+           pdftitle={  },
+           colorlinks=TRUE,
+           linkcolor=black,
+           citecolor=blue,
+           urlcolor=blue
+       }
+
+
+
+
+\usepackage{upquote}
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    upquote=true,
+    breaklines=true,
+    breakindent=0pt,
+    keepspaces=true,
+    showspaces=false,
+    columns=fullflexible,
+    showtabs=false,
+    showstringspaces=false,
+    escapeinside={(*@}{@*)},
+    extendedchars=true,
+}
+\newcommand{\HLJLt}[1]{#1}
+\newcommand{\HLJLw}[1]{#1}
+\newcommand{\HLJLe}[1]{#1}
+\newcommand{\HLJLeB}[1]{#1}
+\newcommand{\HLJLo}[1]{#1}
+\newcommand{\HLJLk}[1]{\textcolor[RGB]{148,91,176}{\textbf{#1}}}
+\newcommand{\HLJLkc}[1]{\textcolor[RGB]{59,151,46}{\textit{#1}}}
+\newcommand{\HLJLkd}[1]{\textcolor[RGB]{214,102,97}{\textit{#1}}}
+\newcommand{\HLJLkn}[1]{\textcolor[RGB]{148,91,176}{\textbf{#1}}}
+\newcommand{\HLJLkp}[1]{\textcolor[RGB]{148,91,176}{\textbf{#1}}}
+\newcommand{\HLJLkr}[1]{\textcolor[RGB]{148,91,176}{\textbf{#1}}}
+\newcommand{\HLJLkt}[1]{\textcolor[RGB]{148,91,176}{\textbf{#1}}}
+\newcommand{\HLJLn}[1]{#1}
+\newcommand{\HLJLna}[1]{#1}
+\newcommand{\HLJLnb}[1]{#1}
+\newcommand{\HLJLnbp}[1]{#1}
+\newcommand{\HLJLnc}[1]{#1}
+\newcommand{\HLJLncB}[1]{#1}
+\newcommand{\HLJLnd}[1]{\textcolor[RGB]{214,102,97}{#1}}
+\newcommand{\HLJLne}[1]{#1}
+\newcommand{\HLJLneB}[1]{#1}
+\newcommand{\HLJLnf}[1]{\textcolor[RGB]{66,102,213}{#1}}
+\newcommand{\HLJLnfm}[1]{\textcolor[RGB]{66,102,213}{#1}}
+\newcommand{\HLJLnp}[1]{#1}
+\newcommand{\HLJLnl}[1]{#1}
+\newcommand{\HLJLnn}[1]{#1}
+\newcommand{\HLJLno}[1]{#1}
+\newcommand{\HLJLnt}[1]{#1}
+\newcommand{\HLJLnv}[1]{#1}
+\newcommand{\HLJLnvc}[1]{#1}
+\newcommand{\HLJLnvg}[1]{#1}
+\newcommand{\HLJLnvi}[1]{#1}
+\newcommand{\HLJLnvm}[1]{#1}
+\newcommand{\HLJLl}[1]{#1}
+\newcommand{\HLJLld}[1]{\textcolor[RGB]{148,91,176}{\textit{#1}}}
+\newcommand{\HLJLs}[1]{\textcolor[RGB]{201,61,57}{#1}}
+\newcommand{\HLJLsa}[1]{\textcolor[RGB]{201,61,57}{#1}}
+\newcommand{\HLJLsb}[1]{\textcolor[RGB]{201,61,57}{#1}}
+\newcommand{\HLJLsc}[1]{\textcolor[RGB]{201,61,57}{#1}}
+\newcommand{\HLJLsd}[1]{\textcolor[RGB]{201,61,57}{#1}}
+\newcommand{\HLJLsdB}[1]{\textcolor[RGB]{201,61,57}{#1}}
+\newcommand{\HLJLsdC}[1]{\textcolor[RGB]{201,61,57}{#1}}
+\newcommand{\HLJLse}[1]{\textcolor[RGB]{59,151,46}{#1}}
+\newcommand{\HLJLsh}[1]{\textcolor[RGB]{201,61,57}{#1}}
+\newcommand{\HLJLsi}[1]{#1}
+\newcommand{\HLJLso}[1]{\textcolor[RGB]{201,61,57}{#1}}
+\newcommand{\HLJLsr}[1]{\textcolor[RGB]{201,61,57}{#1}}
+\newcommand{\HLJLss}[1]{\textcolor[RGB]{201,61,57}{#1}}
+\newcommand{\HLJLssB}[1]{\textcolor[RGB]{201,61,57}{#1}}
+\newcommand{\HLJLnB}[1]{\textcolor[RGB]{59,151,46}{#1}}
+\newcommand{\HLJLnbB}[1]{\textcolor[RGB]{59,151,46}{#1}}
+\newcommand{\HLJLnfB}[1]{\textcolor[RGB]{59,151,46}{#1}}
+\newcommand{\HLJLnh}[1]{\textcolor[RGB]{59,151,46}{#1}}
+\newcommand{\HLJLni}[1]{\textcolor[RGB]{59,151,46}{#1}}
+\newcommand{\HLJLnil}[1]{\textcolor[RGB]{59,151,46}{#1}}
+\newcommand{\HLJLnoB}[1]{\textcolor[RGB]{59,151,46}{#1}}
+\newcommand{\HLJLoB}[1]{\textcolor[RGB]{102,102,102}{\textbf{#1}}}
+\newcommand{\HLJLow}[1]{\textcolor[RGB]{102,102,102}{\textbf{#1}}}
+\newcommand{\HLJLp}[1]{#1}
+\newcommand{\HLJLc}[1]{\textcolor[RGB]{153,153,119}{\textit{#1}}}
+\newcommand{\HLJLch}[1]{\textcolor[RGB]{153,153,119}{\textit{#1}}}
+\newcommand{\HLJLcm}[1]{\textcolor[RGB]{153,153,119}{\textit{#1}}}
+\newcommand{\HLJLcp}[1]{\textcolor[RGB]{153,153,119}{\textit{#1}}}
+\newcommand{\HLJLcpB}[1]{\textcolor[RGB]{153,153,119}{\textit{#1}}}
+\newcommand{\HLJLcs}[1]{\textcolor[RGB]{153,153,119}{\textit{#1}}}
+\newcommand{\HLJLcsB}[1]{\textcolor[RGB]{153,153,119}{\textit{#1}}}
+\newcommand{\HLJLg}[1]{#1}
+\newcommand{\HLJLgd}[1]{#1}
+\newcommand{\HLJLge}[1]{#1}
+\newcommand{\HLJLgeB}[1]{#1}
+\newcommand{\HLJLgh}[1]{#1}
+\newcommand{\HLJLgi}[1]{#1}
+\newcommand{\HLJLgo}[1]{#1}
+\newcommand{\HLJLgp}[1]{#1}
+\newcommand{\HLJLgs}[1]{#1}
+\newcommand{\HLJLgsB}[1]{#1}
+\newcommand{\HLJLgt}[1]{#1}
+
+
+\begin{document}
+
+
+
+\begin{lstlisting}
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{POROČILO}@*) (*@\HLJLcs{3}@*) (*@\HLJLcs{-}@*) (*@\HLJLcs{MATEMATIČNO}@*) (*@\HLJLcs{NIHALO}@*) (*@\HLJLcs{18.3.5}@*)
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{Analizirali}@*) (*@\HLJLcs{smo}@*) (*@\HLJLcs{rešitev}@*) (*@\HLJLcs{diferencialne}@*) (*@\HLJLcs{enačbe}@*) (*@\HLJLcs{za}@*) (*@\HLJLcs{nelinearno}@*) (*@\HLJLcs{nihalo}@*)
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{in}@*) (*@\HLJLcs{jo}@*) (*@\HLJLcs{primerjamo}@*) (*@\HLJLcs{z}@*) (*@\HLJLcs{linearno}@*) (*@\HLJLcs{aproksimacijo.}@*)
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{Enačba}@*) (*@\HLJLcs{nelinearnega}@*) (*@\HLJLcs{nihala}@*) (*@\HLJLcs{je}@*) (*@\HLJLcs{prevedena}@*) (*@\HLJLcs{na}@*) (*@\HLJLcs{sistem}@*) (*@\HLJLcs{prvega}@*) (*@\HLJLcs{reda.}@*)
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{Čeprav}@*) (*@\HLJLcs{navodila}@*) (*@\HLJLcs{naloge}@*) (*@\HLJLcs{določajo}@*) (*@\HLJLcs{uporabo}@*) (*@\HLJLcs{metode}@*) (*@\HLJLcs{DOPRI5,}@*) (*@\HLJLcs{smo}@*) (*@\HLJLcs{zaradi}@*) (*@\HLJLcs{tehničnih}@*) (*@\HLJLcs{težav,}@*)
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{(uvozom}@*) (*@\HLJLcs{in}@*) (*@\HLJLcs{izvedba}@*) (*@\HLJLcs{znotraj}@*) (*@\HLJLcs{projektnega}@*) (*@\HLJLcs{okolja)}@*)
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{za}@*) (*@\HLJLcs{reševanje}@*) (*@\HLJLcs{diferencialne}@*) (*@\HLJLcs{enačbe}@*) (*@\HLJLcs{uporabili}@*) (*@\HLJLcs{klasično}@*) (*@\HLJLcs{metodo}@*) (*@\HLJLcs{Runge-Kutta}@*) (*@\HLJLcs{4.}@*) (*@\HLJLcs{reda}@*) (*@\HLJLcs{(RK4).}@*)
+(*@\HLJLk{using}@*) (*@\HLJLn{Plots}@*)
+(*@\HLJLk{using}@*) (*@\HLJLn{MatNihalo}@*)
+(*@\HLJLcs{{\#}{\#}}@*) (*@\HLJLcs{---------------------------------}@*)
+(*@\HLJLcs{{\#}{\#}}@*) (*@\HLJLcs{Primerjava}@*) (*@\HLJLcs{nihal}@*)
+(*@\HLJLcs{{\#}{\#}}@*) (*@\HLJLcs{---------------------------------}@*)
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{Za}@*) (*@\HLJLcs{različne}@*) (*@\HLJLcs{začetne}@*) (*@\HLJLcs{pogoje}@*) (*@\HLJLcs{primerjamo}@*) (*@\HLJLcs{odmik}@*) (*@\HLJLcs{nelinearnega}@*) (*@\HLJLcs{in}@*) (*@\HLJLcs{harmoničnega}@*) (*@\HLJLcs{nihala.}@*)
+(*@\HLJLcs{{\#}}@*)
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{Parametri}@*) (*@\HLJLcs{nihala:}@*)
+(*@\HLJLn{g}@*) (*@\HLJLoB{=}@*) (*@\HLJLnfB{9.81}@*)       (*@\HLJLcs{{\#}}@*) (*@\HLJLcs{gravitacija}@*) (*@\HLJLcs{(m/s{\textasciicircum}2)}@*)
+(*@\HLJLn{l}@*) (*@\HLJLoB{=}@*) (*@\HLJLnfB{1.0}@*)        (*@\HLJLcs{{\#}}@*) (*@\HLJLcs{dolžina}@*) (*@\HLJLcs{nihala}@*) (*@\HLJLcs{(m)}@*)
+(*@\HLJLcs{{\#}}@*)
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{Začetni}@*) (*@\HLJLcs{pogoji:}@*)
+(*@\HLJLn{\ensuremath{\theta}0}@*) (*@\HLJLoB{=}@*) (*@\HLJLn{\ensuremath{\pi}}@*)(*@\HLJLoB{/}@*)(*@\HLJLni{4}@*)       (*@\HLJLcs{{\#}}@*) (*@\HLJLcs{začetni}@*) (*@\HLJLcs{kot}@*) (*@\HLJLcs{(rad)}@*)
+(*@\HLJLn{\ensuremath{\theta}dot0}@*) (*@\HLJLoB{=}@*) (*@\HLJLnfB{0.0}@*)    (*@\HLJLcs{{\#}}@*) (*@\HLJLcs{začetna}@*) (*@\HLJLcs{kotna}@*) (*@\HLJLcs{hitrost}@*)
+(*@\HLJLcs{{\#}}@*)
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{Časovni}@*) (*@\HLJLcs{interval:}@*)
+(*@\HLJLn{tspan}@*) (*@\HLJLoB{=}@*) (*@\HLJLp{(}@*)(*@\HLJLnfB{0.0}@*)(*@\HLJLp{,}@*) (*@\HLJLnfB{10.0}@*)(*@\HLJLp{)}@*)  (*@\HLJLcs{{\#}}@*) (*@\HLJLcs{od}@*) (*@\HLJLcs{0}@*) (*@\HLJLcs{do}@*) (*@\HLJLcs{10}@*) (*@\HLJLcs{s}@*)
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{Reši}@*) (*@\HLJLcs{nelinearno}@*) (*@\HLJLcs{(matematično)}@*) (*@\HLJLcs{nihalo}@*)
+(*@\HLJLn{sol{\_}nl}@*) (*@\HLJLoB{=}@*) (*@\HLJLn{MatNihalo}@*)(*@\HLJLoB{.}@*)(*@\HLJLnf{odmik{\_}nihala}@*)(*@\HLJLp{(}@*)(*@\HLJLn{\ensuremath{\theta}0}@*)(*@\HLJLp{,}@*) (*@\HLJLn{\ensuremath{\theta}dot0}@*)(*@\HLJLp{,}@*) (*@\HLJLn{tspan}@*)(*@\HLJLp{)}@*)
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{Reši}@*) (*@\HLJLcs{linearno}@*) (*@\HLJLcs{(harmonično)}@*) (*@\HLJLcs{nihalo}@*)
+(*@\HLJLn{sol{\_}lin}@*) (*@\HLJLoB{=}@*) (*@\HLJLn{MatNihalo}@*)(*@\HLJLoB{.}@*)(*@\HLJLnf{odmik{\_}nihala}@*)(*@\HLJLp{(}@*)(*@\HLJLn{\ensuremath{\theta}0}@*)(*@\HLJLp{,}@*) (*@\HLJLn{\ensuremath{\theta}dot0}@*)(*@\HLJLp{,}@*) (*@\HLJLn{tspan}@*)(*@\HLJLp{;}@*) (*@\HLJLn{harmonic}@*)(*@\HLJLoB{=}@*)(*@\HLJLkc{true}@*)(*@\HLJLp{)}@*)
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{Nariši}@*) (*@\HLJLcs{primerjavo,}@*) (*@\HLJLcs{ki}@*) (*@\HLJLcs{bo}@*) (*@\HLJLcs{vključena}@*) (*@\HLJLcs{v}@*) (*@\HLJLcs{poročilo.}@*)
+(*@\HLJLnf{plot}@*)(*@\HLJLp{(}@*)(*@\HLJLn{sol{\_}nl}@*)(*@\HLJLoB{.}@*)(*@\HLJLn{t}@*)(*@\HLJLp{,}@*) (*@\HLJLn{sol{\_}nl}@*)(*@\HLJLp{[}@*)(*@\HLJLni{1}@*)(*@\HLJLp{,}@*)(*@\HLJLoB{:}@*)(*@\HLJLp{],}@*) (*@\HLJLn{label}@*)(*@\HLJLoB{=}@*)(*@\HLJLs{"{}Nelinearno"{}}@*)(*@\HLJLp{)}@*)
+(*@\HLJLnf{plot!}@*)(*@\HLJLp{(}@*)(*@\HLJLn{sol{\_}lin}@*)(*@\HLJLoB{.}@*)(*@\HLJLn{t}@*)(*@\HLJLp{,}@*) (*@\HLJLn{sol{\_}lin}@*)(*@\HLJLp{[}@*)(*@\HLJLni{1}@*)(*@\HLJLp{,}@*)(*@\HLJLoB{:}@*)(*@\HLJLp{],}@*) (*@\HLJLn{label}@*)(*@\HLJLoB{=}@*)(*@\HLJLs{"{}Linearno}@*) (*@\HLJLs{(harmonično)"{}}@*)(*@\HLJLp{,}@*)
+      (*@\HLJLn{xlabel}@*)(*@\HLJLoB{=}@*)(*@\HLJLs{"{}t}@*) (*@\HLJLs{[s]"{}}@*)(*@\HLJLp{,}@*) (*@\HLJLn{ylabel}@*)(*@\HLJLoB{=}@*)(*@\HLJLs{"{}\ensuremath{\theta}(t)}@*) (*@\HLJLs{[rad]"{}}@*)(*@\HLJLp{,}@*)
+      (*@\HLJLn{title}@*)(*@\HLJLoB{=}@*)(*@\HLJLs{"{}Primerjava}@*) (*@\HLJLs{linearnega}@*) (*@\HLJLs{in}@*) (*@\HLJLs{nelinearnega}@*) (*@\HLJLs{nihala"{}}@*)(*@\HLJLp{)}@*)
+
+(*@\HLJLcs{{\#}{\#}}@*) (*@\HLJLcs{---------------------------------}@*)
+(*@\HLJLcs{{\#}{\#}}@*) (*@\HLJLcs{Nihalni}@*) (*@\HLJLcs{čas}@*) (*@\HLJLcs{glede}@*) (*@\HLJLcs{na}@*) (*@\HLJLcs{energijo}@*)
+(*@\HLJLcs{{\#}{\#}}@*) (*@\HLJLcs{---------------------------------}@*)
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{Kot}@*) (*@\HLJLcs{zahtevajo}@*) (*@\HLJLcs{navodila,}@*) (*@\HLJLcs{prikažemo}@*) (*@\HLJLcs{odvisnost}@*) (*@\HLJLcs{nihalnega}@*) (*@\HLJLcs{časa}@*) (*@\HLJLcs{od}@*) (*@\HLJLcs{začetne}@*) (*@\HLJLcs{energije}@*)
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{nihala}@*) (*@\HLJLcs{(ki}@*) (*@\HLJLcs{je}@*) (*@\HLJLcs{določena}@*) (*@\HLJLcs{z}@*) (*@\HLJLcs{začetnim}@*) (*@\HLJLcs{odmikom).}@*)
+
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{Prikaz}@*) (*@\HLJLcs{odvisnosti}@*) (*@\HLJLcs{nihalnega}@*) (*@\HLJLcs{časa}@*) (*@\HLJLcs{od}@*) (*@\HLJLcs{začetnega}@*) (*@\HLJLcs{kota}@*)
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{plot{\_}nihalni{\_}cas()}@*) (*@\HLJLcs{{\#}}@*) (*@\HLJLcs{Premaknjeno}@*) (*@\HLJLcs{na}@*) (*@\HLJLcs{konec}@*)
+
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{Graf}@*) (*@\HLJLcs{potrjuje,}@*) (*@\HLJLcs{da}@*) (*@\HLJLcs{se}@*) (*@\HLJLcs{nihalni}@*) (*@\HLJLcs{čas}@*) (*@\HLJLcs{povečuje}@*) (*@\HLJLcs{z}@*) (*@\HLJLcs{začetnim}@*) (*@\HLJLcs{odmikom,}@*)
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{kar}@*) (*@\HLJLcs{dokazuje}@*) (*@\HLJLcs{nelinearno}@*) (*@\HLJLcs{naravo}@*) (*@\HLJLcs{nihala.}@*)
+
+(*@\HLJLcs{{\#}}@*) (*@\HLJLcs{To}@*) (*@\HLJLcs{je}@*) (*@\HLJLcs{konec}@*) (*@\HLJLcs{poročila.}@*)
+(*@\HLJLs{"{}"{}"{}}@*)
+    (*@\HLJLs{plot{\_}nihajni{\_}cas()}@*)
+(*@\HLJLs{Izriše}@*) (*@\HLJLs{graf}@*) (*@\HLJLs{nihajnega}@*) (*@\HLJLs{časa}@*) (*@\HLJLs{glede}@*) (*@\HLJLs{na}@*) (*@\HLJLs{začetno}@*) (*@\HLJLs{energijo}@*) (*@\HLJLs{(kot}@*) (*@\HLJLs{\ensuremath{\theta}0).}@*)
+(*@\HLJLs{Vrednost:}@*)
+(*@\HLJLs{-Plots}@*) (*@\HLJLs{objekt}@*) (*@\HLJLs{s}@*) (*@\HLJLs{krivuljo}@*) (*@\HLJLs{T(\ensuremath{\theta}0)}@*)
+(*@\HLJLs{"{}"{}"{}}@*)
+(*@\HLJLk{function}@*) (*@\HLJLnf{plot{\_}nihajni{\_}cas}@*)(*@\HLJLp{()}@*)
+    (*@\HLJLn{\ensuremath{\theta}0s}@*) (*@\HLJLoB{=}@*) (*@\HLJLnfB{0.1}@*)(*@\HLJLoB{:}@*)(*@\HLJLnfB{0.1}@*)(*@\HLJLoB{:}@*)(*@\HLJLnfB{1.5}@*)
+    (*@\HLJLn{T{\_}ener}@*) (*@\HLJLoB{=}@*) (*@\HLJLp{[}@*)(*@\HLJLn{MatNihalo}@*)(*@\HLJLoB{.}@*)(*@\HLJLnf{pendulum{\_}period}@*)(*@\HLJLp{(}@*)(*@\HLJLn{\ensuremath{\theta}0}@*)(*@\HLJLp{)}@*) (*@\HLJLk{for}@*) (*@\HLJLn{\ensuremath{\theta}0}@*) (*@\HLJLkp{in}@*) (*@\HLJLn{\ensuremath{\theta}0s}@*)(*@\HLJLp{]}@*)
+    (*@\HLJLnf{plot}@*)(*@\HLJLp{(}@*)(*@\HLJLn{\ensuremath{\theta}0s}@*)(*@\HLJLp{,}@*) (*@\HLJLn{T{\_}ener}@*)(*@\HLJLp{,}@*) (*@\HLJLn{xlabel}@*)(*@\HLJLoB{=}@*)(*@\HLJLs{"{}Začetni}@*) (*@\HLJLs{odmik}@*) (*@\HLJLs{\ensuremath{\theta}{\_}0[rad]"{}}@*)(*@\HLJLp{,}@*)
+         (*@\HLJLn{ylabel}@*)(*@\HLJLoB{=}@*)(*@\HLJLs{"{}Nihani}@*) (*@\HLJLs{čas}@*) (*@\HLJLs{T[s]"{}}@*)(*@\HLJLp{,}@*)
+         (*@\HLJLn{title}@*)(*@\HLJLoB{=}@*)(*@\HLJLs{"{}Nihalni}@*) (*@\HLJLs{čas}@*) (*@\HLJLs{nihala}@*) (*@\HLJLs{glede}@*) (*@\HLJLs{na}@*) (*@\HLJLs{energijo"{}}@*)(*@\HLJLp{,}@*)
+         (*@\HLJLn{legend}@*)(*@\HLJLoB{=}@*)(*@\HLJLkc{false}@*)(*@\HLJLp{)}@*)
+(*@\HLJLk{end}@*)
+
+(*@\HLJLnf{plot{\_}nihalni{\_}cas}@*)(*@\HLJLp{()}@*)
+\end{lstlisting}
+
+\begin{lstlisting}
+Error: UndefVarError: (*@{{\textasciigrave}}@*)plot(*@{{\_}}@*)nihalni(*@{{\_}}@*)cas(*@{{\textasciigrave}}@*) not defined in (*@{{\textasciigrave}}@*)Main.var(*@{"{}}@*)(*@{{\#}}@*)(*@{{\#}}@*)WeaveSa
+ndBox(*@{{\#}}@*)230(*@{"{}}@*)(*@{{\textasciigrave}}@*)
+Suggestion: check for spelling errors or missing imports.
+\end{lstlisting}
+
+
+
+\end{document}
