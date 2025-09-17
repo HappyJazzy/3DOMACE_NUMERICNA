@@ -69,6 +69,7 @@ function odmik_nihala(θ0, θ0p, tspan, g=9.81, l=1.0; harmonic=false)
     u0 = [θ0, θ0p]
     p = (g, l)
     f = harmonic ? sistem_harmonic! : sistem_nihala!
+    # mišljeno je, da sami implementirate metodo za reševanje NDE
     prob = ODEProblem(f, u0, tspan, p)
     # Klasična Runge-Kutta metoda 4. reda
     sol = solve(prob, RK4(); dt=0.01, saveat=0.01)
@@ -93,6 +94,13 @@ function nihajni_cas(sol)
     θ_values = sol[1,:]
     crossings = findall(i -> θ_values[i]*θ_values[i+1] < 0, 1:length(θ_values)-1)
     isempty(crossings) && return NaN
+    # natančnost je omejena s korakom metode za reševanje NDE
+    # kar pomeni, da za večjo natančnost potrebuje metoda za NDE večje število korakov
+    # čeprav je napaka izračunanih približkov dovolj majhna.
+    # Se pravi, da bi za 10 decimalk potrebovali 10^10 korakov krat perioda.
+    # To omejitev bi presegli, če bi problem iskanja periode zastavili kot reševanje 
+    # nelinearne enačbe y(t + p) = y(t) in ga rešili z metodami za reševanje nelinearnih 
+    # enačb npr. bisekcijo ali Newtonovo metodo.
     return 2 * t_values[crossings[1]]   
 end
 

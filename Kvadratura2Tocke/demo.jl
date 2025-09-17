@@ -40,3 +40,5 @@ println("Ocenjena napaka zadnjega koraka: ", @sprintf("%.10e", err))
 # da je število vrednotenj funkcije (evals) minimalno potrebno za dosego
 # zahtevane natančnosti. 
 
+# Ni čisto res, saj število korakov povečujete za faktor 2. Adaptivni algoritmi 
+# po navadi delujejo rekurzivno tako da drobijo korak, če je napaka prevelika.

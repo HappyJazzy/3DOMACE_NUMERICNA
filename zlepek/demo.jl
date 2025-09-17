@@ -30,3 +30,6 @@ println("Vrednost zlepka v x=1.5: ", Zlepek.vrednost(Z, 1.5))
 
 # Spodnja koda bo narisala graf
 Zlepek.plot(Z)
+
+# Poročilo je pomankljivo. Pričakoval bi opis problema, izpeljava ali opis algoritma, ki 
+# reši problem. Ali vsaj navedba vira, po katerem ste algoritem povzeli. 

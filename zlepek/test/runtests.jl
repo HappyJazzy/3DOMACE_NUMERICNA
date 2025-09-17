@@ -10,3 +10,5 @@ Z = Zlepek.interpoliraj(x, y)
 @test isapprox(Zlepek.vrednost(Z, 1.0), 2.0)
 @test isapprox(Zlepek.vrednost(Z, 2.0), 0.0)
 @test isapprox(Zlepek.vrednost(Z, 3.0), 2.0)
+
+# dodajte še teste za vrednosti med interpolacijskimi točkami
