@@ -45,3 +45,8 @@ Bash
 
 julia --project=. makedocs.jl
 Ko se proces zaključi, bo v mapi zlepek ustvarjena datoteka z imenom demo_report.pdf.
+
+Komentar:
+
+Koda je dobro zastavljenja in primerno komentirana. Testi so pomankljivi.
+Prav tako poročilo. Rešitev ni slaba, ni pa tudi odlična.  

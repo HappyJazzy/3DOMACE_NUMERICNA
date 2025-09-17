@@ -5,6 +5,7 @@ export Spline, interpoliraj, vrednost, plot
 using Plots
 
 # Struct to hold cubic spline coefficients
+# Dodaj docstring z dokumentacijo za tip!
 struct Spline
     x::Vector{Float64}
     y::Vector{Float64}
@@ -14,6 +15,8 @@ struct Spline
     d::Vector{Float64}
 end
 
+# Izračuna koeficiente ..., ki interpolira podatke iz `x` in `y`.
+# Vrne vrednost tipa `Zlepek`, ki predstavlja kubični zlepek ...
 """
     interpoliraj(x, y)
 
@@ -69,9 +72,13 @@ Vrne Float64 = ocenjena y vrednost zlepka v točki x0
 """
 function vrednost(Z::Spline, x0::Float64)
     x, a, b, c, d = Z.x, Z.a, Z.b, Z.c, Z.d
+    # uporabite bisekcijo! 
+    # predpostaviti/preveriti morate, da so x koordinate urejene po velikosti
     i = findlast(xj -> xj <= x0, x)
+    # sprožite napako, če x0 ni znotraj min(Z.x) in max(Z.x)
     i = min(i, length(a))
     dx = x0 - x[i]
+    # Uporabite Hornerjev zapis a[i] + dx*(b[i] + dx*(c[i] + dx*d[i]))
     return a[i] + b[i]*dx + c[i]*dx^2 + d[i]*dx^3
 end
 
