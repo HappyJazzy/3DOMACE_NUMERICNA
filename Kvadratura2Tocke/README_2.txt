@@ -39,3 +39,7 @@ Bash
 
 julia --project=. makedocs.jl
 Ko se proces zaključi, bo v mapi Kvadratura2Tocke ustvarjena datoteka z imenom kvadratura_porocilo.pdf.
+
+Komentar:
+
+Koda in testi so v redu. Poročilo je pomankljivo.
