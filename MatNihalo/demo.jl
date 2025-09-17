@@ -69,3 +69,6 @@ end
 # poročila prihajalo do napake, ki kaže na nepravilno prepoznavo funkcije plot_nihalni_cas.
 
 plot_nihalni_cas()
+
+# V kodi imate znak Unicode 00a0, ki predstavlja nedeljiv presledek. Mogoče ste zato imeli 
+# težave z prepoznavo funkcij. 
